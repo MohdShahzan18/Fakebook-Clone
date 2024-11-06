@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Edit Post</title>
+</head>
+
+<body>
+  <div class="flex items-center justify-center w-full min-h-screen bg-gradient-to-r from-white-900 via-white-800 to-white-900 p-6">
+    <div class="bg-white-800 p-8 rounded-lg shadow-2xl max-w-md w-full hover:scale-110 transition duration-200">
+      <!-- Header (Styled for Facebook Clone) -->
+      <header class="flex items-center justify-between mb-6">
+        <a href="/" class="text-xl font-bold text-blue-500"><i class="fa-brands fa-facebook"></i>akebook</a>
+        <nav class="flex space-x-4">
+          <a href="/profile" class="text-blue-500 hover:scale-[1.1]  hover:text-blue-700 transition duration-150">Profile</a>
+          <a href="/logout" class="text-blue-500  hover:scale-[1.1] hover:text-blue-700 transition duration-150">Logout</a>
+        </nav>
+      </header>
+      <!-- Edit Post Form -->
+      <h2 class="text-2xl font-semibold text-blue-500 mb-6 text-center">Edit Your Post</h2>
+      <form action="/update/<%= post._id %>" method="post" class="space-y-4">
+        <textarea
+          class="w-full h-40 px-4 py-3 bg-gray-50 border border-transparent rounded-md outline-none resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="What's on your mind?" name="content"><%= post.content %></textarea>
+        <div class="flex justify-center">
+          <input class="bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-md mt-2 px-6 py-2 w-32 transition duration-200 cursor-pointer text-sm" type="submit" value="Update Post">
+        </div>
+      </form>
+      <!-- Go Back Link -->
+       
+      <div class="text-center mt-4">
+        <a href="/profile" class="text-sm text-blue-500 hover:text-blue-700 underline transition duration-150">← Back to Feed</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

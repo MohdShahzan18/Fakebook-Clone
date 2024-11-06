@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Login in to fakebook</title>
+</head>
+
+<body class="bg-gradient-to-r from-gray-100 to-gray-50 min-h-screen flex flex-col items-center justify-center">
+  <div>
+    <h2 class="text-blue-600 text-6xl font-bold mb-5 p-0"><i class="fa-brands fa-facebook"></i>akebook</h2>
+  </div>
+  <!-- Main Container -->
+  <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-sm">
+    <!-- Logo or Heading -->
+    <div class="text-center mb-6">
+      <h2 class="text-4xl font-bold">Welcome Back</h2>
+      <p class="text-gray-600 mt-2">Please enter your details to log in fakebook.</p>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/login" method="post" class="space-y-4">
+      <!-- Email Field -->
+      <div>
+        <!-- <label for="email" class="block text-sm font-medium text-gray-300">Email</label> -->
+        <input id="email" name="email" type="email" placeholder="Enter your email" required
+          class="w-full px-4 py-2 mt-2 bg-white-700 border border-gray-600 rounded-md focus:outline-none focus:border-2 focus:border-black">
+      </div>
+
+      <!-- Password Field -->
+      <div>
+        <!-- <label for="password" class="block text-sm font-medium text-gray-300">Password</label> -->
+        <input id="password" name="password" type="password" placeholder="Enter your password" required
+          class="w-full px-4 py-2 mt-2 bg-white-700 border border-gray-600 rounded-md focus:outline-none focus:border-2 focus:border-black">
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition duration-200">
+          Login
+        </button>
+      </div>
+    </form>
+
+    <!-- Additional Link -->
+    <div class="text-center mt-4">
+      <a href="/" class="text-blue-700 hover:underline">Sign up for fakebook</a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
